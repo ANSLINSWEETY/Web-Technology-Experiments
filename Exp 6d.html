@@ -1,0 +1,19 @@
+<html>
+<body>
+<img id="car" src="image.png" width="150"><br><br>
+<button onclick="move()">Move</button>
+<button onclick="stop()">Stop</button>
+<script>
+var x = 0;
+var t;
+function move() {
+x = x + 5;
+document.getElementById("car").style.marginLeft = x + "px";
+t = setTimeout(move, 100);
+}
+function stop() {
+clearTimeout(t);
+}
+</script>
+</body>
+</html>

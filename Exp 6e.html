@@ -1,0 +1,23 @@
+<html>
+<body>
+<h2>Student Details</h2>
+<p id="result"></p>
+<script>
+var students = [
+{name:"John", reg:"UR13CS129", year:1995},
+{name:"Joseph", reg:"UR13CS130", year:2002}
+];
+for(var i=0; i<students.length; i++) {
+document.getElementById("result").innerHTML +=
+students[i].name + "'s Register Number is " +
+students[i].reg + "<br>";
+if(students[i].year < 2000)
+document.getElementById("result").innerHTML +=
+"Born before 2000<br><br>";
+else
+document.getElementById("result").innerHTML +=
+"Born after 2000<br><br>";
+}
+</script>
+</body>
+</html>

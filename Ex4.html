@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS3</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+/* Header */
+header{
+    background:linear-gradient(to right,#0047AB,#4F9DFF);
+    text-align:center;
+    color:white;
+    padding:25px;
+}
+header img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    box-shadow:3px 3px 8px black;
+}
+header h1{
+    margin-top:10px;
+    text-shadow:2px 2px 5px black;
+}
+/* Navigation */
+nav{
+    background:gray;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+nav li{
+    padding:15px 30px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+}
+nav li:hover{
+    background:red;
+}
+/* Feature */
+.feature{
+    padding:30px;
+    text-align:center;
+    background:linear-gradient(to right,pink,lightblue);
+}
+.box{
+    display:inline-block;
+    width:180px;
+    margin:10px;
+    padding:20px;
+    background:green;
+    color:white;
+    border-radius:25px;
+    box-shadow:4px 4px 8px gray;
+}
+/* Multiple Background */
+.background{
+    padding:40px;
+    text-align:center;
+    background-image:url("https://picsum.photos/100/100"),
+                     url("https://picsum.photos/800/400");
+    background-position:right bottom,left top;
+    background-repeat:no-repeat,repeat;
+    background-size:100px 100px,cover;
+}
+/* Form */
+.login{
+    padding:40px;
+    text-align:center;
+    background:#ddd;
+}
+.form{
+    display:inline-block;
+    width:280px;
+    margin:15px;
+    padding:20px;
+    background:white;
+    border-radius:20px;
+    box-shadow:5px 5px 10px black;
+}
+.form h2{
+    margin-bottom:15px;
+}
+.form input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:2px solid gray;
+}
+.form input:focus{
+    border:3px solid red;
+    background:yellow;
+}
+.form input:required{
+    border:2px solid blue;
+}
+.form input[type="email"]:invalid{
+    color:red;
+}
+.form input[type="email"]:valid{
+    color:blue;
+}
+.form button{
+    width:100%;
+    padding:10px;
+    background:#0066ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+.form button:hover{
+    background:green;
+}
+/* Image Hover */
+.items{
+    padding:30px;
+    text-align:center;
+}
+.itemName,.itemImg{
+    padding:10px;
+    display:inline-block;
+}
+.itemImg{
+    opacity:0.2;
+}
+.itemName:hover + .itemImg{
+    opacity:1;
+}
+/* Table */
+table{
+    width:80%;
+    margin:20px auto;
+    border-collapse:collapse;
+}
+td{
+    padding:12px;
+    border:1px solid black;
+}
+tr:nth-child(odd){
+    background:lightyellow;
+}
+tr:nth-child(even){
+    background:lightgreen;
+}
+tr:hover{
+    background:orange;
+}
+/* Footer */
+footer{
+    background:#ffe4c4;
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+}
+/* Responsive */
+@media screen and (max-width:768px){
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+.form{
+    width:90%;
+}
+.box{
+    width:80%;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<img src="https://picsum.photos/80" alt="Logo">
+<h1>Advanced CSS3 Webpage</h1>
+<p>HTML5 & CSS3 Lab Experiment</p>
+</header>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+<section class="feature">
+<h2>CSS3 Features</h2>
+<div class="box">Rounded Corners</div>
+<div class="box">Gradient</div>
+<div class="box">Box Shadow</div>
+<div class="box">Background</div>
+</section>
+<section class="background">
+<h2>Multiple Backgrounds</h2>
+<p>CSS3 supports multiple background images and background sizing.</p>
+</section>
+<section class="login">
+<div class="form">
+<h2>Sign In</h2>
+<input type="text" placeholder="Username" required>
+<input type="password" placeholder="Password" required>
+<button>Sign In</button>
+</div>
+<div class="form">
+<h2>Sign Up</h2>
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<input type="password" placeholder="Password" required>
+<button>Sign Up</button>
+</div>
+</section>
+<section class="items">
+<h2>Image Hover Effect</h2>
+<span class="itemName">Flower</span>
+<span class="itemImg">
+<img src="./image.png" width="100">
+</span>
+</section>
+<section>
+<h2 style="text-align:center;">Product Table</h2>
+<table>
+<tr>
+<td>Product 1</td>
+<td>₹100</td>
+</tr>
+<tr>
+<td>Product 2</td>
+<td>₹200</td>
+</tr>
+<tr>
+<td>Product 3</td>
+<td>₹300</td>
+</tr>
+<tr>
+<td>Product 4</td>
+<td>₹400</td>
+</tr>
+</table>
+</section>
+<footer>
+<p>Your Address</p>
+<p>© 2026-2027 (URK24CS1179) - Web Technology Lab . All Rights Reserved.</p>
+</footer>
+</body>
+</html>

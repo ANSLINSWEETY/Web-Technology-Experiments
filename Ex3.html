@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Blossom Flower Shop</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body{
+            margin:20px;
+            background-color:lightpink;
+            font-family:Arial;
+        }
+
+        header{
+            background-color:darkgreen;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        header h1{
+            font-size:35px;
+            letter-spacing:4px;
+            text-shadow:3px 3px 5px gray;
+        }
+
+        nav{
+            background-color:palevioletred;
+            text-align:center;
+            padding:10px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:white;
+            padding:10px;
+            display:inline-block;
+        }
+
+        a:link{
+            color:white;
+        }
+
+        a:visited{
+            color:yellow;
+        }
+
+        a:hover{
+            background-color:lightgreen;
+            color:black;
+        }
+
+        a:active{
+            background-color:red;
+            color:white;
+        }
+
+        section{
+            background-color:white;
+            margin-top:20px;
+            padding:20px;
+        }
+
+        h2{
+            color:darkgreen;
+            text-align:center;
+            text-decoration:underline;
+            text-shadow:2px 2px 3px gray;
+        }
+
+        p{
+            color:black;
+            font-size:17px;
+            letter-spacing:1px;
+            text-align:justify;
+            line-height:1.5;
+        }
+
+        ul{
+            list-style-type:circle;
+        }
+
+        .flowers{
+            column-count:3;
+            column-gap:30px;
+        }
+
+        .flower{
+            background-color:mistyrose;
+            padding:15px;
+            margin:10px;
+            text-align:center;
+            border:2px solid pink;
+        }
+
+        .flower h3{
+            color:darkred;
+            font-size:20px;
+        }
+
+        .price{
+            color:green;
+            font-weight:bold;
+            text-align:center;
+        }
+
+        img{
+            display:block;
+            width:180px;
+            height:130px;
+            margin:auto;
+        }
+
+        .offer{
+            width:50%;
+            height:150px;
+            margin:20px auto;
+            padding:15px;
+            background-color:lightgreen;
+            text-align:center;
+        }
+
+        .offer p{
+            text-align:center;
+            font-weight:bold;
+        }
+
+        footer{
+            background-color:darkgreen;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        @media screen and (max-width:600px){
+
+            body{
+                background-color:lightyellow;
+            }
+
+            nav a{
+                display:block;
+                padding:8px;
+            }
+
+            .flowers{
+                column-count:1;
+            }
+
+            .offer{
+                width:80%;
+                height:auto;
+            }
+
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 Blossom Flower Shop 🌸</h1>
+        <p>Fresh Flowers for Every Special Moment</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Flowers</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+
+        <h2>Welcome to Blossom Flower Shop</h2>
+
+        <p>
+            Welcome to Blossom Flower Shop, where beautiful and fresh flowers
+            are available for every special occasion. We provide attractive
+            bouquets for birthdays, weddings, anniversaries and celebrations.
+            Choose your favorite flowers and make your moments memorable.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Our Flowers</h2>
+
+        <div class="flowers">
+
+            <div class="flower">
+                <h3>🌹 Red Roses</h3>
+                <p>Beautiful roses perfect for expressing love.</p>
+                <p class="price">₹500</p>
+            </div>
+
+            <div class="flower">
+                <h3>🌷 Tulips</h3>
+                <p>Colorful tulips that bring beauty and freshness.</p>
+                <p class="price">₹450</p>
+            </div>
+
+            <div class="flower">
+                <h3>🌻 Sunflowers</h3>
+                <p>Bright flowers that spread happiness and positivity.</p>
+                <p class="price">₹350</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Why Choose Us?</h2>
+
+        <ul>
+            <li>Fresh and beautiful flowers</li>
+            <li>Affordable prices</li>
+            <li>Beautiful flower arrangements</li>
+            <li>Fast delivery</li>
+        </ul>
+
+    </section>
+
+    <section class="offer">
+
+        <h2>🌺 Special Offer 🌺</h2>
+
+        <p>Get 20% OFF on all flower bouquets!</p>
+
+        <p>Order Now and Make Someone Smile 💐</p>
+
+    </section>
+
+    <footer>
+        <p style="color:white; text-align:center;">
+            © 2026 Blossom Flower Shop | Fresh Flowers with Love
+        </p>
+    </footer>
+
+</body>
+</html>
