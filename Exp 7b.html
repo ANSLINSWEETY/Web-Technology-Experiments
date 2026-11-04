@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Shop</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        h2 {
+            background-color: #d00000;
+            color: white;
+            padding: 5px;
+        }
+
+        img {
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+        }
+
+        input {
+            width: 300px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 7px 50px;
+            border: none;
+        }
+
+        #total {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#order").click(function() {
+
+                let q1 = parseInt($("#color").val());
+                let q2 = parseInt($("#brown").val());
+                let q3 = parseInt($("#milky").val());
+                let q4 = parseInt($("#black").val());
+
+                let total = (q1 * 300) +
+                            (q2 * 200) +
+                            (q3 * 250) +
+                            (q4 * 350);
+
+                $("#total").text("₹" + total);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>CAKE SHOP</h2>
+
+    <div>
+        <img src="image.png">
+        <img src="image5.webp">
+        <img src="image2.jpg">
+        <img src="image4.avif">
+    </div>
+
+    <b>Color Cake(Quantity)</b><br>
+    <input type="text" id="color" value="2"><br>
+
+    <b>Brown Cake(Quantity)</b><br>
+    <input type="text" id="brown" value="1"><br>
+
+    <b>Milky Cake(Quantity)</b><br>
+    <input type="text" id="milky" value="2"><br>
+
+    <b>Black Forest Cake(Quantity)</b><br>
+    <input type="text" id="black" value="1"><br><br>
+
+    <button id="order">Place Order</button>
+
+    <h3>Purchase Order Bill!!</h3>
+
+    <b>Total Price: </b>
+    <span id="total">₹0</span>
+
+</body>
+</html>

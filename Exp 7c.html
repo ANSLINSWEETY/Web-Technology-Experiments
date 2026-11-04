@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Workshop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+        #car {
+            width: 240px;
+            height: 80px;
+            background: red;
+            margin: 70px auto 60px;
+            border-radius: 10px;
+            position: relative;
+        }
+        #glass {
+            width: 90px;
+            height: 30px;
+            background: gray;
+            border: 10px solid green;
+            position: absolute;
+            top: -35px;
+            left: 65px;
+        }
+        .tyre {
+            width: 60px;
+            height: 60px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -25px;
+        }
+        #t1 {
+            left: 35px;
+        }
+        #t2 {
+            right: 35px;
+        }
+        button {
+            padding: 8px;
+            margin: 8px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#red").click(function() {
+                $("#car").css("background", "red");
+            });
+            $("#blue").click(function() {
+                $("#car").css("background", "blue");
+            });
+            $("#green").click(function() {
+                $("#car").css("background", "green");
+            });
+            $("#dark").click(function() {
+                $("#glass").css("background", "black");
+            });
+            $("#light").click(function() {
+                $("#glass").css("background", "lightgray");
+            });
+            $("#big").click(function() {
+                $(".tyre").css({
+                    "width": "70px",
+                    "height": "70px"
+                });
+            });
+            $("#small").click(function() {
+                $(".tyre").css({
+                    "width": "45px",
+                    "height": "45px"
+                });
+            });
+            $("#reset").click(function() {
+                $("#car").css("background", "red");
+                $("#glass").css("background", "gray");
+                $(".tyre").css({
+                    "width": "60px",
+                    "height": "60px"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Car Workshop</h2>
+    <div id="car">
+        <div id="glass"></div>
+        <div id="t1" class="tyre"></div>
+        <div id="t2" class="tyre"></div>
+    </div>
+    <button id="red">Change Red Color</button>
+    <button id="blue">Change Blue Color</button>
+    <button id="green">Change Green Color</button>
+    <br>
+    <button id="dark">Dark Glass</button>
+    <button id="light">Light Glass</button>
+    <br>
+    <button id="big">Big Tyres</button>
+    <button id="small">Small Tyres</button>
+    <br>
+    <button id="reset">Reset</button>
+</body>
+</html>
